@@ -26,10 +26,10 @@
   width: 25%;
   border-radius: 0 20px 20px 0;
   cursor: pointer;
-&-button:active{
+}
+.search-button:active {
   scale: 1.05;
   background-color: rgb(196, 194, 194);
-}
 }
 .icon {
   display: inline-block;
@@ -39,4 +39,3 @@
   stroke: currentColor;
   fill: currentColor;
 }
-
