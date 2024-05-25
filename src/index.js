@@ -1,7 +1,5 @@
 import newAPIService from './js/api';
 import Gallery from './js/render';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const service = new newAPIService();
 let refs = {
