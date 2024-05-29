@@ -108,7 +108,6 @@ body {
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
-  cursor: zoom-in;
 }
 
 .info {

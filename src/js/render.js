@@ -20,14 +20,15 @@ export default class Gallery {
           comments,
           downloads,
         }) => {
-          return `<div class="photo-card" data-modal-open>
+          return `<div class="photo-card">
+          <a href="${largeImageURL}">
             <img
               src="${webformatURL}"
-              alt=" "
+              alt="${tags}"
               loading="lazy"
               class="photo"
-              data-picture="${largeImageURL}"
             />
+            </a>
             <div class="info">
               <p class="info-item">
                 <b>Likes</b>
