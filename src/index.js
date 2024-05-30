@@ -1,7 +1,7 @@
 import newAPIService from './js/api';
 import Gallery from './js/render';
-import SimpleLightbox from '../node_modules/simplelightbox';
-import '../node_modules/simplelightbox/dist/simple-lightbox.min.css';
+import simpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const service = new newAPIService();
 let refs = {
@@ -22,16 +22,4 @@ refs.form.addEventListener('submit', async e => {
     service.fetchMore.bind(service)
   );
   imagesGallery.renderGallery();
-
-  gallery.addEventListener('click', openModal);
-
-  function openModal(e) {
-    e.preventDefault();
-  }
-
-  const lightbox = new SimpleLightbox('.gallery a', {
-    captionsDelay: '200ms',
-    captionPosition: 'bottom',
-    captionsData: 'alt',
-  });
 });

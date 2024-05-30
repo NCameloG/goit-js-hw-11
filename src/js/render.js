@@ -51,6 +51,16 @@ export default class Gallery {
         }
       )
       .join('');
+    gallery.addEventListener('click', openModal);
+
+    function openModal(e) {
+      e.preventDefault();
+    }
+    const lightbox = new SimpleLightbox('.gallery a', {
+      captionsDelay: '200ms',
+      captionPosition: 'bottom',
+      captionsData: 'alt',
+    });
     let button = document.createElement('button');
     let div = document.createElement('div');
     div.id = 'loadMoreContainer';
@@ -68,5 +78,6 @@ export default class Gallery {
     this.images.innerHTML += toRenderText;
     div.append(button);
     this.images.append(div);
+    lightbox.refresh();
   }
 }
